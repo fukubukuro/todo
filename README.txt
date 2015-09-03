@@ -7,18 +7,18 @@ Steve Fram
 Example Usage
 
 Retrieve all To-Do items for user id 1, as a JSON array of items:
-  GET http://localhost/list/1
+  GET http://localhost:8080/list/1
 
 Retrieve only the To-Do items that aren't completed for user id 1, as a JSON array of items:
-  GET http://localhost/list/1?complete=0
+  GET http://localhost:8080/list/1?complete=0
 
 Create a new To-Do item for user id 1, returning a JSON array of the user's items (including the new one):
-  POST http://localhost/list/1/newitem
+  POST http://localhost:8080/list/1/newitem
 with a JSON payload modeled after this example:
   {'content': 'new item', 'due': '2015-10-31'}
 
 Set an existing To-Do item's completed state for user id 1, returning a JSON array of the user's items:
-  PUT http://localhost/list/1
+  PUT http://localhost:8080/list/1
 with a JSON payload modeled after this example:
   {'item_id':1, 'complete':1}
 
