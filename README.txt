@@ -33,18 +33,15 @@ present in node_modules. The only exception is mocha which, if you'd like
 to run the unit tests, must be installed globally: 
   $ npm install -g mocha
 
+To set up the database:
+  mysql> create database todo_list;
+  mysql> use todo_list;
+  mysql> source schema.sql;
+
 To run the web service:
   $ node todo.js
 
 To run the unit tests:
   $ mocha
 
-To set up the database:
-  mysql> create database todo_list;
-  mysql> use todo_list;
-  mysql> source schema.sql;
-
-The unit tests will also set up the database with the added bonus of creating
-a few records of sample data.
-
-
+The unit tests will also create a few records of sample data.
